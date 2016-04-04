@@ -1,8 +1,8 @@
-/* Grid based on ungrid.css [1]
-   [1] http://chrisnager.github.io/ungrid/.
+/* Grid based on ungrid.css [1].
+   [1] http://chrisnager.github.io/ungrid/
 */
 
-@include media-min($tablet) {
+@media screen and (min-width: $tablet), print {
     .row {
         width: 100%;
         display: table;
@@ -13,7 +13,7 @@
     }
 }
 
-@include media-max($tablet) {
+@media screen and (max-width: $tablet - 1px) {
     .col {
         width: 100% !important;
     }
