@@ -109,6 +109,14 @@ ul.project-list {
             font-size: 1em;
         }
 
+        h1 span {
+            font-weight: $font-weight-normal;
+        }
+
+        h1 i {
+            opacity: 0.35;
+        }
+
         h2 {
             font-weight: $font-weight-normal;
             font-style: italic;
