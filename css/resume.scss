@@ -96,12 +96,49 @@ ul.project-list {
     list-style-type: none;
 
     li {
+
         @extend .shadow-1;
         display: block;
         box-sizing: border-box;
         border-radius: 2px;
         padding: 1em;
-        background-color: white;
+        background-color: #fdfdfd;
+        margin-top: 1em;
+
+        h1, h2 {
+            font-size: 1em;
+        }
+
+        h2 {
+            font-weight: $font-weight-normal;
+            font-style: italic;
+        }
+
+    }
+
+}
+
+/* Skill list. */
+
+ul.skill-list {
+
+    list-style-type: none;
+
+    li {
+
+        margin: 0.75em 0;
+
+        span {
+            font-style: italic;
+            display: block;
+        }
+
+        i {
+            font-size: 0.8em;
+            font-style: normal;
+            opacity: 0.7;
+        }
+
     }
 
 }
