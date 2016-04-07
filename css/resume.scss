@@ -89,14 +89,31 @@ ul.timeline {
 
 }
 
+/* Project list. */
+
+ul.project-list {
+
+    list-style-type: none;
+
+    li {
+        @extend .shadow-1;
+        display: block;
+        box-sizing: border-box;
+        border-radius: 2px;
+        padding: 1em;
+        background-color: 
+    }
+
+}
+
 /* General structure of the resume. */
 
 .cv {
 
     @extend .shadow-1;
     background: white;
-    margin: 5% auto;
-    width: 90%;
+    margin: 4% auto;
+    width: 92%;
     box-sizing: border-box;
     max-width: 1080px;
     border-radius: 2px;
@@ -109,7 +126,7 @@ ul.timeline {
 
     .contact, .history {
         box-sizing: border-box;
-        padding: 3.5rem;
+        padding: 3.3rem;
     }
 
     .history {
@@ -132,7 +149,7 @@ ul.timeline {
         @extend .shadow-1;
         color: white;
         width: 40%;
-        background-color: #20B6B6; // https://color.hailpixel.com/#40BF6A,40BFBF
+        background-color: #20B6B6; // https://color.hailpixel.com/#1CD478,20B6B6
         background: linear-gradient(110deg, #1CD478 0%, #20B6B6 100%);
 
         .photo {
