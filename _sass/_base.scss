@@ -16,20 +16,6 @@ a, button, label {
     touch-action: manipulation;
 }
 
-/* Media query mixin, use as .selector { @include media-query(tablet) { } }. */
-
-@mixin media-min($device) {
-    @media screen and (min-width: $device) {
-        @content;
-    }
-}
-
-@mixin media-max($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
 /* Device widths as defined by the Chrome Developer Tools. */
 
 $mobile-s: 320px; // E.g., iPhone 4, iPhone 5.
@@ -39,12 +25,13 @@ $tablet: 768px; // E.g., iPad.
 $laptop-s: 1024px;
 $laptop-m: 1440px;
 $laptop-l: 1920px;
+$desktop: 1920px;
 $fourk: 2560px;
 
 /* Base typography. */
 
 $font-family: 'Roboto', sans-serif;
-$font-size: 2.1rem; // From medium.com.
+$font-size: 2.1rem; // From medium.com, corresponds to 21px.
 $line-height: 1.58;
 $font-color: #212121; // From inbox.google.com.
 $html-background-color: #f2f2f2;
@@ -59,10 +46,17 @@ html {
     font-weight: $font-weight-normal;
     line-height: $line-height;
     color: $font-color;
-    background: $html-background-color;
+    background-color: $html-background-color;
     
-    @media screen and (max-width: $mobile-l), print {
-        font-size: 0.857 * 62.5%;
+    /* Downsize the root font-size on devices that you hold closer to your eyes.
+       Apply the same scaling that medium.com does for mobile. By scaling the
+       root font-size (instead of e.g., the body size), we can use `rem`s to
+       define the dimensions of the page and everything will scale accordingly.
+       Also, using a font-size of 62.5% means that one rem corresponds to 10px,
+       unless the user has changed his browser's font size.
+    */
+    @media screen and (max-width: $tablet), print {
+        font-size: 0.857143 * 62.5%;
         line-height: round(0.949 * $line-height * 100) / 100;
     }
 
