@@ -79,6 +79,10 @@ a {
     text-decoration: none;
 }
 
+.scale--1 {
+    font-size: 1em / $font-scale-step;
+}
+
 .scale-0 {
     font-size: 1em;
 }
@@ -89,6 +93,10 @@ a {
 
 .scale-2 {
     font-size: $font-scale-step * $font-scale-step * 1em;
+}
+
+.scale-3 {
+    font-size: $font-scale-step * $font-scale-step * $font-scale-step * 1em;
 }
 
 /* Material design box shadows [1].

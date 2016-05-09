@@ -1,0 +1,112 @@
+---
+---
+
+/* Import Sass components. */
+
+@import "base", "grid";
+
+
+/* Forespell logo. */
+
+i {
+
+    &.logo::before {
+        content: '';
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        vertical-align: -0.125em;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url('../images/forespell.svg');
+    }
+
+    &.brandname::after {
+        content: 'Forespell';
+        color: lighten($font-color, 0%);
+        letter-spacing: -0.04em;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    &.logo.brandname {
+
+        white-space: nowrap;
+
+        &::before {
+            margin-right: 0.125em;
+        }
+
+    }
+
+}
+
+/* Landing page. */
+
+div.landing {
+
+    @extend .scale-2;
+    margin: 10% auto;
+    width: 92%;
+    box-sizing: border-box;
+    max-width: 1080px;
+    border-radius: 2px;
+    text-align: center;
+
+    h1 {
+        @extend .scale-3;
+        margin-top: 0;
+    }
+
+    div.row {
+
+        border-spacing: 0.5em;
+
+        a.col {
+
+            display: block;
+            margin-bottom: 1.1em;
+
+            div.photo {
+
+                @extend .shadow-1;
+                width: 70%;
+                height: 0;
+                padding-bottom: 70%;
+                margin: 0 auto;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100% auto;
+                position: relative;
+                overflow: hidden;
+
+                &.kasper { background-image: url('../images/kasper.png'); }
+                &.laurent { background-image: url('../images/laurent.png'); }
+                &.mathieu { background-image: url('../images/mathieu.jpg'); }
+
+                span {
+                    color: #616161;
+                    color: white;
+                    display: table-cell;
+                    vertical-align: middle;
+                    position: absolute;
+                    width: 100%;
+                    height: 40%;
+                    background: rgba(0, 0, 0, 0.7);
+                    top: 100%;
+                    transition: all 150ms ease;
+                }
+
+            }
+
+            &:hover .photo span {
+                top: 60%;
+            }
+
+        }
+
+    }
+
+}
