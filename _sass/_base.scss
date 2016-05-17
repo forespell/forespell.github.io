@@ -79,6 +79,10 @@ a {
     text-decoration: none;
 }
 
+.scale--2 {
+    font-size: 1em / $font-scale-step / $font-scale-step;
+}
+
 .scale--1 {
     font-size: 1em / $font-scale-step;
 }
