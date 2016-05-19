@@ -1,0 +1,177 @@
+/* Material responsive menu.
+   Based on https://jsfiddle.net/lsorber/mxbwmumz/.
+
+   Accompanying HTML:
+        <nav>
+            <div class="brand">
+                <a href="#"><i class="logo brandname"></i></a>
+            </div>
+            <div class="menu">
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" class="hamburger">
+                    <i></i><i></i><i></i><i></i>
+                </label>
+                <ul>
+                    <li><a href="#">A</a></li>
+                    <li><a href="#">B</a></li>
+                    <li><a href="#">C</a></li>
+                </ul>
+            </div>
+        </nav>
+*/
+
+@import "hamburger_button";
+
+nav {
+
+    color: $font-color-inverse;
+    display: table;
+    width: 100%;
+    position: relative;
+    background: rgba(255, 255, 255, 0);
+    z-index: 999;
+
+    a {
+        color: inherit;
+        font: inherit;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    & > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 2em 8%;
+    }
+
+    .brand {
+
+        text-align: left;
+        padding-right: 0;
+
+        a {
+            @extend .scale-3;
+        }
+
+    }
+
+    .menu {
+
+        padding-left: 0;
+        position: relative;
+
+        label.hamburger {
+            display: none;
+        }
+
+        ul {
+
+            display: table;
+            float: right;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+
+                display: table-cell;
+                padding: 0 1em;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                a {
+
+                    display: inline-block;
+                    box-sizing: border-box;
+                    padding: 0.5em 0.8em;
+
+                    &:hover, &.active {
+                        color: $font-color;
+                        background-color: $font-color-inverse;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: $laptop-s) {
+
+    #hamburger:checked ~ ul {
+        transform: translateY(100%) scale(1);
+    }
+
+    nav {
+
+        & > div {
+            padding: 6%;
+        }
+
+        .menu {
+
+            width: 25%;
+
+            label.hamburger {
+                display: block;
+                float: right;
+            }
+
+            ul {
+
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                display: block;
+                position: absolute;
+                bottom: 10%; /* Fix positioning in IE. */
+                right: 24%; /* 6% margin / 25% width of parent */
+                background: $font-color-inverse;
+                color: $font-color;
+                border-radius: 4px;
+                transform: translateY(100%) scale(0);
+                transition: transform 150ms ease;
+                transform-origin: 85% 0;
+
+                li {
+
+                    display: block;
+                    box-shadow: inset 0 2px 0 -1px white, inset 0 -2px 0 -1px rgba(0, 0, 0, 0.05);
+                    padding: 0;
+
+                    &:first-child {
+                        box-shadow: inset 0 -2px 0 -1px rgba(0, 0, 0, 0.05);
+                    }
+
+                    &:last-child {
+                        box-shadow: inset 0 2px 0 -1px white;
+                    }
+
+                    a {
+
+                        display: block;
+                        padding-left: 1em;
+                        padding-right: 1em;
+
+                        &.active, &:hover {
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

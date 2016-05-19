@@ -1,0 +1,82 @@
+/* Material hamburger button.
+   Based on https://jsfiddle.net/lsorber/qg1gcd62/.
+   
+   Accompanying HTML:
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" class="hamburger">
+            <i></i><i></i><i></i><i></i>
+        </label>
+*/
+
+#hamburger {
+
+    display: none;
+
+    &:checked ~ label.hamburger {
+
+        i:first-child, i:last-child {
+            opacity: 0;
+            transform: scale(0);
+            margin-top: -1px;
+        }
+
+        i:nth-child(2) {
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        i:nth-child(3) {
+            transform: translateX(-50%) rotate(-45deg);
+        }
+
+    }
+
+}
+
+label.hamburger {
+
+    @extend .shadow-2;
+    width: 51px;
+    height: 51px;
+    display: inline-block;
+    background: #f7f7f7;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: middle;
+    transition: all 200ms ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-backface-visibility: hidden; /* Fix 1px shift bug on Chrome. */
+    z-index: 999;
+
+    i {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 25px;
+        height: 2px;
+        background: #333;
+        border-radius: 1px;
+        transform: translateX(-50%);
+        transition: all 200ms ease-in-out;
+
+        &:first-child {
+            margin-top: -9px;
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+            margin-top: -1px;
+        }
+
+        &:last-child {
+            margin-top: 7px;
+        }
+
+    }
+
+    // &:hover {
+    //     @extend .shadow-3;
+    //     transform: translateY(-3px);
+    // }
+
+}
