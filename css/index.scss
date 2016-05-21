@@ -21,7 +21,7 @@ $hero-background-color: #00c4fe; // 5, 10, 72, 64, 70
 
     background-color: $hero-background-color;
     color: $font-color-inverse;
-    height: 96vh;
+    height: 92vh;
     position: relative;
 
     nav ul a {
@@ -42,7 +42,7 @@ $hero-background-color: #00c4fe; // 5, 10, 72, 64, 70
             margin: 0;
             padding: 0 4%;
             text-align: center;
-            width: 100%;
+            width: 100vw;
             max-width: 17em;
             display: block;
             position: absolute;
