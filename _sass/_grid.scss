@@ -4,17 +4,36 @@
 
 @media screen and (min-width: $tablet), print {
     .row {
-        width: 100%;
         display: table !important;
         table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
     }
     .col {
         display: table-cell !important;
+        border: 0px solid transparent;
+        background-clip: padding-box;
+    }
+    @for $i from 1 through 6 {
+        .row.gutter-#{$i} > .col + .col {
+            border-left-width: $i * 1em;
+        }
+        .row.gutter-#{$i} + .row > .col {
+            border-top-width: $i * 1em;
+        }
     }
 }
 
 @media screen and (max-width: $tablet - 1px) {
     .col {
         width: auto !important;
+    }
+    @for $i from 1 through 6 {
+        .row.gutter-#{$i} > .col + .col {
+            margin-top: $i * 1em;
+        }
+        .row.gutter-#{$i} + .row > .col {
+            margin-top: $i * 1em;
+        }
     }
 }
