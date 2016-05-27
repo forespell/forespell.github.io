@@ -15,17 +15,22 @@
 
 /* Hero. */
 
-$hero-background-color: #00c4fe; // 5, 10, 72, 64, 70
+$highlight-color: #00c4fe; // 5, 10, 72, 64, 70
+$highlight-border-color: rgba($highlight-color, 0.7);
+$hero-background-color: $html-background-color;
 
 #hero {
 
     background-color: $hero-background-color;
-    color: $font-color-inverse;
     height: 92vh;
     position: relative;
 
     nav ul a {
         border-radius: 2px;
+        &:hover {
+            color: $font-color-inverse;
+            background-color: $highlight-color;
+        }
     }
 
     .tagline {
@@ -37,33 +42,50 @@ $hero-background-color: #00c4fe; // 5, 10, 72, 64, 70
         top: 0;
         left: 0;
 
-        h1, h2 {
+        div {
+
             box-sizing: border-box;
             margin: 0;
             padding: 0 4%;
             text-align: center;
-            width: 100vw;
-            max-width: 17em;
+            width: 100%;
+            
             display: block;
             position: absolute;
             left: 50%;
             transform: translateY(-50%) translateX(-50%);
+
+            &:first-child {
+                @extend .scale-3;
+                top: 49%;
+                max-width: 17em;
+            }
+
+            &:last-child {
+                @extend .scale-1;
+                bottom: 0;
+            }
+
         }
 
         h1 {
-            top: 49%;
+            font-size: 1em;
+            display: inline;
+            line-height: 1.6;
+            border-bottom: 0.35em solid $highlight-border-color;
         }
 
         h2 {
-            color: rgba($font-color-inverse, 0.7);
-            bottom: 0;
-            @media screen and (max-width: $mobile-s) {
-                font-size: 1em * $font-scale-step;
-            }
-        }
+            font-size: 1em;
+            display: inline;
+            line-height: 1;
+            color: rgba($font-color, 0.2);
 
-        i {
-            display: block;
+            i {
+                display: inline;
+                position: relative;
+                top: -0.5em;
+            }
         }
 
     }
@@ -75,12 +97,39 @@ $hero-background-color: #00c4fe; // 5, 10, 72, 64, 70
 div.landing-row {
 
     & > div {
+
         margin: 0 auto;
         width: 88%;
         box-sizing: border-box;
         max-width: 1500px;
         border-radius: 2px;
         padding: 6em 0;
+
+        & > h1 {
+
+            @extend .scale-2;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            margin-top: -0.5em;
+            margin-bottom: 3em;
+            text-align: center;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 2.5em;
+                height: 0.175em;
+                background-color: $highlight-border-color;
+                position: absolute;
+                bottom: -0.5em;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+
     }
 
     &#what-we-do {
@@ -197,6 +246,7 @@ div.landing-row {
                 background-size: contain;
                 position: relative;
                 overflow: hidden;
+                transform: translateZ(0);
 
                 &.kasper { background-image: url('../images/kasper.png'); }
                 &.laurent { background-image: url('../images/laurent.png'); }

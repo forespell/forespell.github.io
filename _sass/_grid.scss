@@ -11,15 +11,18 @@
     }
     .col {
         display: table-cell !important;
-        border: 0px solid transparent;
-        background-clip: padding-box;
     }
     @for $i from 1 through 6 {
-        .row.gutter-#{$i} > .col + .col {
-            border-left-width: $i * 1em;
+        .anti-gutter-#{$i} {
+            margin-left: -$i * 1em;
+            margin-right: -$i * 1em;
         }
-        .row.gutter-#{$i} + .row > .col {
-            border-top-width: $i * 1em;
+        .row.gutter-#{$i} {
+            border-collapse: separate;
+            border-spacing: $i * 1em 0;
+        }
+        .row.gutter-#{$i} + .row {
+            margin-top: $i * 1em;
         }
     }
 }
