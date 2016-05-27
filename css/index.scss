@@ -41,19 +41,19 @@ $hero-background-color: $html-background-color;
         height: 100%;
         top: 0;
         left: 0;
+        text-align: center;
 
         div {
 
             box-sizing: border-box;
             margin: 0;
             padding: 0 4%;
-            text-align: center;
             width: 100%;
-            
-            display: block;
-            position: absolute;
-            left: 50%;
-            transform: translateY(-50%) translateX(-50%);
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            left: 0;
+            transform: translateY(-50%);
 
             &:first-child {
                 @extend .scale-3;
@@ -63,6 +63,7 @@ $hero-background-color: $html-background-color;
 
             &:last-child {
                 @extend .scale-1;
+                position: absolute;
                 bottom: 0;
             }
 
