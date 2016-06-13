@@ -8,6 +8,10 @@
 
 i {
 
+    &.inverse {
+        color: $font-color-inverse;
+    }
+
     &.logo::before {
         content: '';
         width: 0.85em;
@@ -20,31 +24,21 @@ i {
         background-image: url('../images/forespell.svg');
     }
 
-    &.brandname::after {
-        content: 'Forespell';
+    &.logo.inverse::before {
+        background-image: url('../images/forespell_white.svg');
+    }
+
+    &.brandname {
         font-family: 'Roboto', sans-serif;
         letter-spacing: -0.01em;
         font-weight: 300;
         font-style: normal;
         color: $font-color;
-    }
-
-    &.logo.inverse::before {
-        background-image: url('../images/forespell_white.svg');
-    }
-
-    &.brandname.inverse::after {
-        color: $font-color-inverse;
-    }
-
-    &.logo.brandname {
-
         white-space: nowrap;
+    }
 
-        &::before {
-            margin-right: 0.25em;
-        }
-
+    &.logo.brandname::before {
+        margin-right: 0.25em;
     }
 
 }
