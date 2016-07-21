@@ -1,0 +1,7 @@
+nb=$1
+html=$(echo $nb | sed "s/ipynb/html/g" )
+echo $html
+jupyter nbconvert $nb
+sed "s/<img src=\"/<img src=\"\/blog\/notebooks\//g" $html > "../_drafts/$html"
+ 
+
