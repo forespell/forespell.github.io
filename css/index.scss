@@ -225,9 +225,28 @@ div.landing-row {
 
     }
 
-    &#who-we-are {
+    &#clients {
 
         background-color: white;
+        text-align: center;
+
+        div.col {
+
+            display: block;
+            vertical-align: middle;
+
+            img.client {
+                width: 90%;
+                max-width: 200px;
+                transform: translateZ(0);
+            }
+
+        }
+
+    }
+
+    &#who-we-are {
+
         text-align: center;
 
         a.col {
