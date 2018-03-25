@@ -50,251 +50,27 @@
         <meta name="msapplication-config" content="favicon/browserconfig.xml">
         <meta name="theme-color" content="#00c4fe">
         
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500,700">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/latest/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Condensed:600&text=RADIX">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira+Condensed:200&text=.AI">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
+        <link rel="stylesheet" href="index.css">
 
     </head>
     <body>
 
-        <div id="hero">
-
-            <nav>
-                <div class="brand">
-                    <a href="https://www.forespell.com"><i class="logo brandname">Forespell</i></a>
-                </div>
-                <div class="menu">
-                    <input type="checkbox" id="hamburger">
-                    <label for="hamburger" class="hamburger">
-                        <i></i><i></i><i></i><i></i>
-                    </label>
-                    <ul>
-                        <li><a href="#what-we-do">What we do</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#clients">Clients</a></li>
-                        <li><a href="#who-we-are">The team</a></li>
-                        <li><a href="#get-in-touch">Get in touch</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="tagline">
-                <div><h1>We are data experts who use AI to optimize your organization</h1></div>
-                <div><h2>Scroll down to find out more<br><i class="fa fa-chevron-down"></i></h2></div>
+        <section id="hero">
+        <div class="container">
+            <i class="forespell logo">Forespell</i>
+            <p>has evolved into</p>
+            <div class="next">
+                <a class="rockestate logo" href="https://www.rockestate.be"></a>
+                <p>and</p>
+                <a class="radix-ai logo" href="https://radix.ai">radix<span>.ai</span></a>
             </div>
-
         </div>
-
-    	<div id="what-we-do" class="landing-row">
-        <div>
-
-            <h1>Our services</h1>
-
-            <div class="anti-gutter-3">
-            <div class="row gutter-4">
-
-                <div class="col">
-
-                    <div class="row">
-                        <div class="col consulting"></div>
-                        <div class="col">
-                            <h3>Consulting</h3>
-                            <p>We use the latest tech in machine learning to optimize your organization by extracting the maximum value out of your data.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col">
-
-                    <div class="row">
-                        <div class="col training"></div>
-                        <div class="col">
-                            <h3>Training</h3>
-                            <p>We offer courses on advanced machine learning, developing data science web services and APIs, and data visualization.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-
-            </div>
-
-            <div class="row gutter-4">
-
-                <div class="col">
-
-                    <div class="row">
-                        <div class="col microservices"></div>
-                        <div class="col">
-                            <h3>Microservices</h3>
-                            <p>Subscribe to our microservices or connect to our APIs to access a wide range of predictions and data on-demand.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="col">
-
-                    <div class="row">
-                        <div class="col data"></div>
-                        <div class="col">
-                            <h3>Curated data sets</h3>
-                            <p>We curate and connect a large number of data sets that can enrich your data and substantially improve your models.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-
-            </div>
-            </div>
-
-    	</div>
-        </div>
-
-        <div id="projects" class="landing-row">
-        <div>
-
-            <h1>Projects we're working on</h1>
-
-            <div class="anti-gutter-3">
-            <div class="row gutter-3">
-
-                <div class="col">
-
-                    <a class="card" href="http://www.investimize.com">
-                        <h3 class="investimize">Investimize<span>.com</span> <i class="fa fa-external-link"></i></h3>
-                        <p>Investimize is a service that helps you invest by picking the best combination out of more than 10&nbsp;000 ETFs in order to maximize your return and minimize volatility.</p>
-                    </a>
-
-                </div>
-
-                <div class="col">
-
-                    <a class="card" href="https://www.rockestate.be">
-                        <h3 class="rockestate">Rockestate<span>.be</span> <i class="fa fa-external-link"></i></h3>
-                        <p>Rockestate is a service that uses machine learning to estimate the value of a property. Look up an address to check out its value and other interesting data.</p>
-                    </a>
-
-                </div>
-
-            </div>
-            </div>
-
-        </div>
-        </div>
-
-        <div id="clients" class="landing-row">
-        <div>
-
-            <h1>Trusted by</h1>
-
-            <div class="anti-gutter-3">
-            <div class="row gutter-3">
-
-                <div class="col">
-                    <img class="client" src='images/clients/Atlas-Copco-Logo.svg'>
-                </div>
-
-                <div class="col">
-                    <img class="client" src='images/clients/AXA-Logo.svg'>
-                </div>
-
-                <div class="col">
-                    <img class="client" src='images/clients/Imec-Logo.svg'>
-                </div>
-
-            </div>
-            <div class="row gutter-3">
-                <div class="col">
-                    <img class="client" src='images/clients/Lavetan-Logo.png'>
-                </div>
-                <div class="col">
-                    <img class="client" src='images/clients/Tiger-Power-Logo.png'>
-                </div>
-                <div class="col">
-                </div>
-            </div>
-            </div>
-
-        </div>
-        </div>
-
-        <div id="who-we-are" class="landing-row">
-        <div>
-        
-            <h1>We're available for hire</h1>
-
-            <div class="anti-gutter-3">
-            <div class="row gutter-3">
-
-                <a class="col" href="resume/kasper">
-                    <div class="photo kasper"><span>CV <i class="fa fa-arrow-circle-right"></i></span></div>
-                    Kasper Van Lombeek
-                </a>
-
-                <a class="col" href="resume/laurent">
-                    <div class="photo laurent"><span>CV <i class="fa fa-arrow-circle-right"></i></span></div>
-                    Laurent Sorber
-                </a>
-
-                <a class="col" href="resume/mathieu">
-                    <div class="photo mathieu"><span>CV <i class="fa fa-arrow-circle-right"></i></span></div>
-                    Mathieu Carette
-                </a>
-
-            </div>
-            </div>
-
-        </div>
-        </div>
-
-        <div id="get-in-touch" class="landing-row">
-        <div>
-        
-            <div class="anti-gutter-3">
-            <div class="row gutter-3">
-
-                <div class="col">
-                    <div>
-                        <h3>Follow us on</h3>
-                        <a href="https://twitter.com/forespell"><i class="fa fa-fw fa-twitter"></i> Twitter</a><br>
-                        <a href="https://www.facebook.com/forespell"><i class="fa fa-fw fa-facebook"></i> Facebook</a><br>
-                        <a href="https://www.linkedin.com/company/forespell"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div>
-                        <h3>Drop us a line</h3>
-                        <a href="tel:+32478476145"><i class="fa fa-fw fa-whatsapp"></i> +32 479 52 13 56</a><br>
-                        <a href="mailto:hello@forespell.com"><i class="fa fa-inbox fa-fw"></i> hello@forespell.com</a>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div>
-                        <h3>Look us up</h3>
-                        <a href="http://kbopub.economie.fgov.be/kbopub/zoeknummerform.html?lang=en&nummer=0660.746.974&actionLu=Zoek"><i class="fa fa-fw fa-book"></i> VAT BE 0660.746.974</a><br>
-                        <a href="https://goo.gl/maps/eKg78p91GFM2"><i class="fa fa-fw fa-map"></i> European Data Innovation Hub<br>
-                        Vorstlaan 23 bus 411<br>
-                        1170 Brussels, Belgium</a>
-                    </div>
-                </div>
-
-            </div>
-            </div>
-
-        </div>
-        </div>
-        
-        <script>
-            // Fix some mobile browsers changing `vh` as the user scrolls.
-            document.addEventListener('DOMContentLoaded', function() {
-                var hero = document.getElementById('hero');
-                hero.style.height = hero.clientHeight + 'px';
-            }, false);
-        </script>
+        </section>
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
